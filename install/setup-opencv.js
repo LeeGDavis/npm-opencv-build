@@ -12,7 +12,7 @@ const {
   numberOfCoresAvailable
 } = require('../constants')
 
-const tag = '3.4.1'
+const tag = process.env.OPENCV_BUILD_VERSION || '3.4.3'
 
 function getIfExistsDirCmd(dirname, exists = true) {
   return isWin() ? `if ${!exists ? 'not ' : ''}exist ${dirname}` : ''
